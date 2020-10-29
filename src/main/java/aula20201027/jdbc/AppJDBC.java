@@ -12,8 +12,8 @@ public class AppJDBC {
             long inicio = System.currentTimeMillis();
             String exemploUrlSQLServer = "jdbc:sqlserver://localhost;databaseName=NOME_DO_BANCO;user=NOME_USUÁRIO;password=SENHA";
             Connection conn = DriverManager.getConnection(
-                "jdbc:postgresql://localhost:5432/esoft4s2020", "postgres", "postgres");
-            conn.setAutoCommit(false);
+                "jdbc:postgresql://localhost:5432/esoft4s2020", "postgres", "postgres"); //GARANTA A CONEXÃO
+            conn.setAutoCommit(false); // LIGAÇÃO NÃO AUTOMATICA
 
             Statement createTable =  conn.createStatement();    
             
@@ -32,12 +32,12 @@ public class AppJDBC {
                 insertProduto.setDouble(3, 2.25 * i);
                 insertProduto.executeUpdate();
             }            
-            conn.commit();
+            conn.commit(); //CONECTA O COMMIT
 
             System.out.println("Foi! Tempo total = " + (System.currentTimeMillis()-inicio) + " ms.");
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        } // FECHA A CONEXÃO 
     }
 
 }
