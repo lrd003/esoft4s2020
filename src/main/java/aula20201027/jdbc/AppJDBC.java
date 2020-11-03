@@ -21,7 +21,7 @@ public class AppJDBC {
                 +" id bigint not null primary key," 
                 +" descricao varchar(255) not null unique," 
                 +" preco numeric(10,2))");
-
+            
             PreparedStatement insertProduto = conn
                 .prepareStatement("insert into produto (id, descricao, preco) values (?,?,?)");
             
