@@ -21,6 +21,7 @@ public class AppSpringBootJpa implements CommandLineRunner  {
         for (Vinho v : vinhoService.obterTodos()) {
             System.out.println(v);
         }
-	}
+    }
+    
     
 }
