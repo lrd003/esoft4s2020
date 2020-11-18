@@ -46,18 +46,20 @@ public class Perfil {
 
     @Override
     public  String toString() {
-        String stringEndereços = "Endereços =[";
+        String stringEndereços = "\n---------Endereços---------";
         for (Endereco e : this.endereços) {
-            stringEndereços += e.toString() + ",";
+            stringEndereços += e.toString();
         }
         
-        return "Perfil [Nome ="  + nome +  "," 
-            +"Email ="  + email +  "," 
-            + "CPF = "  + cpf +  "," 
-            + "Celular = "  + celular +  "," 
-            + "Senha = "  + senha +  "," 
+        return "\n" + "---------PERFIL---------" 
+            + "\n"
+            +"[Nome ="  + nome + "\n" 
+            +"Email = "  + email + "\n" 
+            + "CPF = "  + cpf +  "\n"
+            + "Celular = "  + celular + "\n" 
+            + "Senha = "  + senha +"]" + "\n"
             + stringEndereços.substring(0, stringEndereços.length()-1) 
-            + ", EndereçoPrincipal =" + endereçoPrincipal + "]";
+            + "\n" + "\n---------Endereço Principal---------" + endereçoPrincipal;
     }
 
 	public void setEndereçoPrincipal(Endereco endereçoPrincipal) {
