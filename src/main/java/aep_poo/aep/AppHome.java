@@ -14,6 +14,10 @@ public class AppHome {
         Endereco endereçoRodrigues = new Endereco("Algum lugar de Maringá", "222", "Maringá", "Zona Leste", "Brasil", "PR");
         //---------------------------------Adicionando Informações de Endereço----------------------------
 
+        Realizarpedido Pizza = new Realizarpedido (2, "Pizza de Calabresa");
+        exemplo.addCardapio(Pizza);
+
+
         //Adicionando Endereço no Perfil do Usuário--------------------------------
         exemplo.addEndereço(enderecoVitima);
         exemplo.addEndereço(enderecoFamiliarVitima);

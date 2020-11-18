@@ -10,6 +10,7 @@ public class Perfil {
     private String celular;
     private String senha;
     private List<Endereco> endereços = new ArrayList<>();
+    private List<Cardapio> cardapios = new ArrayList<>();
     private Endereco endereçoPrincipal;
 
     public Perfil(String nome, String email, String cpf, String celular, String senha) {
@@ -42,6 +43,10 @@ public class Perfil {
 
     public void addEndereço(Endereco novo) {
         this.endereços.add(novo);
+    }
+
+    public void addCardapio(Cardapio novo) {
+        this.cardapios.add(novo);
     }
 
     @Override
